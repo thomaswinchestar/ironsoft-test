@@ -112,6 +112,14 @@ PHP version 8.1 or higher is required, with the following extensions installed:
 
 ## Running the Application
 
+### Using CodeIgniter Development Server (Recommended)
+
+```bash
+php spark serve
+```
+
+Then open your browser to `http://localhost:8080`
+
 ### Using PHP Built-in Server
 
 ```bash
