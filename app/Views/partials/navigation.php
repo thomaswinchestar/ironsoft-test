@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
         <div class="container-fluid px-4">
             <a class="navbar-brand" href="<?= base_url('/') ?>" aria-label="<?= htmlspecialchars($navigation['brand_name'] ?? 'Iron Software') ?> Home">
-                <img src="<?= base_url('/' . ($navigation['logo'] ?? 'assets/LOGO-Nav.svg')) ?>" alt="<?= htmlspecialchars($navigation['brand_name'] ?? 'Iron Software') ?>" class="nav-logo">
+                <img src="<?= base_url(($navigation['logo'] ?? 'assets/LOGO-Nav.svg')) ?>" alt="<?= htmlspecialchars($navigation['brand_name'] ?? 'Iron Software') ?>" class="nav-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

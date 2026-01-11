@@ -38,7 +38,7 @@
         ]
     },
     "hero": {
-        "logo": "assets/LOGO-IronPDFforC++-Banner.svg",
+        "logo": "assets/LOGO-IronPDF-logo-Banner.svg",
         "subtitle": "Building on the success of IronPDF for .NET",
         "title": "Beta Software Program",
         "highlight": "IronPDF for C++",

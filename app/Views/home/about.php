@@ -8,7 +8,7 @@
         <div class="row align-items-center">
             <div class="col-lg-4">
                 <div class="html-pdf-icon" aria-hidden="true">
-                    <img src="<?= base_url('/' . ($why_section['icon'] ?? 'assets/HTML-PDF-Neon-BG.svg')) ?>" alt="Convert HTML to PDF" width="308" height="216" loading="lazy">
+                    <img src="<?= base_url(($why_section['icon'] ?? 'assets/HTML-PDF-Neon-BG.svg')) ?>" alt="Convert HTML to PDF" width="308" height="216" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-8">

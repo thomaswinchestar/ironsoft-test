@@ -9,7 +9,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 id="features-title" class="section-title">
-                    <span><?= htmlspecialchars($features['section_title'] ?? 'IronPDF for C++') ?></span><img src="<?= base_url('/' . ($features['badge_image'] ?? 'assets/badge.svg')) ?>" alt="Coming Soon" class="coming-soon-badge">
+                    <span><?= htmlspecialchars($features['section_title'] ?? 'IronPDF for C++') ?></span><img src="<?= base_url(($features['badge_image'] ?? 'assets/badge.svg')) ?>" alt="Coming Soon" class="coming-soon-badge">
                 </h2>
             </div>
             
@@ -22,7 +22,7 @@
                             <p class="feature-text"><?= htmlspecialchars($feature['text']) ?></p>
                         </div>
                         <?php if ($index < $featureCount - 1): ?>
-                            <img src="<?= base_url('/' . ($features['divider_image'] ?? 'assets/divider.svg')) ?>" alt="" class="feature-divider" aria-hidden="true">
+                            <img src="<?= base_url(($features['divider_image'] ?? 'assets/divider.svg')) ?>" alt="" class="feature-divider" aria-hidden="true">
                         <?php endif; ?>
                     <?php endforeach; ?>
                 <?php endif; ?>

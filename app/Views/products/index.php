@@ -18,7 +18,7 @@
                             <div class="product-card">
                                 <span class="badge <?= $product['status'] === 'released' ? 'badge-released' : 'badge-coming-soon' ?>"><?= htmlspecialchars($product['badge_text']) ?></span>
                                 <div class="product-logo">
-                                    <img src="<?= base_url('/' . $product['logo']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" width="113" height="40" loading="lazy">
+                                    <img src="<?= base_url($product['logo']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" width="113" height="40" loading="lazy">
                                 </div>
                             </div>
                         </a>
