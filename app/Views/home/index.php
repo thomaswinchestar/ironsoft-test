@@ -6,7 +6,7 @@
 <section class="hero-banner-section" aria-labelledby="hero-title">
     <!-- Banner Image positioned absolutely on the right -->
     <div class="banner-image-wrapper" aria-hidden="true">
-        <img src="<?= base_url($hero['banner_image'] ?? 'assets/Banner-IMAGE-right.svg') ?>" alt="" class="banner-image">
+        <img src="<?= base_url('/' . ($hero['banner_image'] ?? 'assets/Banner-IMAGE-right.svg')) ?>" alt="" class="banner-image">
     </div>
     
     <!-- Hero Content -->
@@ -14,7 +14,7 @@
         <div class="container">
             <div class="hero-content">
                 <div class="brand-logo mb-3">
-                    <img src="<?= base_url($hero['logo'] ?? 'assets/LOGO-IronPDFforC++-Banner.svg') ?>" alt="IronPDF for C++" class="hero-logo">
+                    <img src="<?= base_url('/' . ($hero['logo'] ?? 'assets/LOGO-IronPDFforC++-Banner.svg')) ?>" alt="IronPDF for C++" class="hero-logo">
                 </div>
                 <p class="hero-subtitle"><?= htmlspecialchars($hero['subtitle'] ?? 'Building on the success of IronPDF for .NET') ?></p>
                 <h1 id="hero-title" class="hero-title">
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="text-center">
                 <h2 id="features-title" class="section-title">
-                    <span><?= htmlspecialchars($features['section_title'] ?? 'IronPDF for C++') ?></span><img src="<?= base_url($features['badge_image'] ?? 'assets/badge.svg') ?>" alt="Coming Soon" class="coming-soon-badge">
+                    <span><?= htmlspecialchars($features['section_title'] ?? 'IronPDF for C++') ?></span><img src="<?= base_url('/' . ($features['badge_image'] ?? 'assets/badge.svg')) ?>" alt="Coming Soon" class="coming-soon-badge">
                 </h2>
             </div>
             
@@ -80,7 +80,7 @@
                             <p class="feature-text"><?= htmlspecialchars($feature['text']) ?></p>
                         </div>
                         <?php if ($index < $featureCount - 1): ?>
-                            <img src="<?= base_url($features['divider_image'] ?? 'assets/divider.svg') ?>" alt="" class="feature-divider" aria-hidden="true">
+                            <img src="<?= base_url('/' . ($features['divider_image'] ?? 'assets/divider.svg')) ?>" alt="" class="feature-divider" aria-hidden="true">
                         <?php endif; ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -108,7 +108,7 @@
         <div class="row align-items-center">
             <div class="col-lg-4">
                 <div class="html-pdf-icon" aria-hidden="true">
-                    <img src="<?= base_url($why_section['icon'] ?? 'assets/HTML-PDF-Neon-BG.svg') ?>" alt="Convert HTML to PDF" width="308" height="216" loading="lazy">
+                    <img src="<?= base_url('/' . ($why_section['icon'] ?? 'assets/HTML-PDF-Neon-BG.svg')) ?>" alt="Convert HTML to PDF" width="308" height="216" loading="lazy">
                 </div>
             </div>
             <div class="col-lg-8">
@@ -139,7 +139,7 @@
                             <div class="product-card">
                                 <span class="badge <?= $product['status'] === 'released' ? 'badge-released' : 'badge-coming-soon' ?>"><?= htmlspecialchars($product['badge_text']) ?></span>
                                 <div class="product-logo">
-                                    <img src="<?= base_url($product['logo']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" width="113" height="40" loading="lazy">
+                                    <img src="<?= base_url('/' . $product['logo']) ?>" alt="<?= htmlspecialchars($product['name']) ?>" width="113" height="40" loading="lazy">
                                 </div>
                             </div>
                         </a>
