@@ -4,7 +4,7 @@ This project implements the IronPDF for C++ landing page template using CodeIgni
 
 ## Live Demo
 
-🌐 **[https://ironpdf.42web.io/](https://ironpdf.42web.io/)**
+🌐 **[https://ironpdf.42web.io/public/](https://ironpdf.42web.io/public/)**
 
 View the live production deployment of this project.
 
