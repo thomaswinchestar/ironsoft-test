@@ -74,45 +74,45 @@ ci-ironpdf/
 | `/products/nodejs` | Products | show | IronPDF for NodeJS page |
 | `/api/site-data` | Api | siteData | JSON API endpoint |
 
-## Installation & Setup
+## Prerequisites
 
-### Prerequisites
+- PHP 8.1 or higher
+- Composer
+- Git
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+**Required PHP Extensions:**
+- intl
+- mbstring
+- json
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- json (enabled by default)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+## Quick Start
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+### 1. Clone the Repository
 
-### Installation
+```bash
+git clone https://github.com/thomaswinchestar/ironsoft-test.git
+cd ironsoft-test
+```
 
-1. **Using Composer** (recommended for full CI4 installation):
-   ```bash
-   composer create-project codeigniter4/appstarter ci-ironpdf
-   composer update
-   ```
+### 2. Install Dependencies
 
-2. **Configuration**:
-   ```bash
-   cp env .env
-   ```
-   Edit `.env` and configure:
-   - `app.baseURL` - Your application URL
-   - Database settings (if needed)
+```bash
+composer install
+```
 
-3. **Important**: `index.php` is located in the `public/` folder for better security. Configure your web server to point to the `public/` directory, not the project root.
+### 3. Configure Environment (Optional)
 
-## Running the Application
+Copy the environment file and update if needed:
 
-### Using CodeIgniter Development Server (Recommended)
+```bash
+cp env .env
+```
+
+Edit `.env` to configure:
+- `app.baseURL` - Your application URL (default: `http://localhost:8080/`)
+- Database settings (if needed)
+
+### 4. Run the Development Server
 
 ```bash
 php spark serve
@@ -120,27 +120,16 @@ php spark serve
 
 Then open your browser to `http://localhost:8080`
 
-### Using PHP Built-in Server
+## Alternative: Using PHP Built-in Server
 
 ```bash
 cd public
 php -S localhost:8080
 ```
 
-Then open your browser to `http://localhost:8080`
+## Production Deployment
 
-### Using Apache/Nginx
-
-Point your web server's document root to the `public/` directory.
-
-**Apache**: The included `.htaccess` file handles URL rewriting.
-
-**Nginx**: Add rewrite rules to your server configuration:
-```nginx
-location / {
-    try_files $uri $uri/ /index.php$is_args$args;
-}
-```
+For production deployment to web servers (Apache/Nginx), see [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
 
 ## Navigation Menu
 
@@ -193,16 +182,6 @@ Information about why Iron Software created the C++ PDF library.
 5. **Data Separation**: JSON data file separate from controllers
 6. **Assets**: Static files in public directory
 7. **Security**: Front controller pattern prevents direct file access
-
-## Framework Updates
-
-Run `composer update` whenever there is a new release of the framework. Check the release notes to see if there are any changes you might need to apply to your `app` folder. The affected files can be copied or merged from `vendor/codeigniter4/framework/app`.
-
-## Documentation
-
-- [CodeIgniter 4 User Guide](https://codeigniter.com/user_guide/)
-- [CodeIgniter 4 Forum](https://forum.codeigniter.com/forumdisplay.php?fid=28)
-- [Development Repository](https://github.com/codeigniter4/CodeIgniter4)
 
 ## Quality Assurance
 
